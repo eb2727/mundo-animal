@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mundo animal EP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    body {
+  background-color: #fdfaf5;
+  color: #333;
+}
+
+.hero {
+      padding: 4rem;
+      text-align: center;
+      background-color: #d4e8da;
+      border-radius: 1rem;
+      margin: 3rem auto;
+      max-width: 800px;
+    }
+
+h1, h2, h3 {
+  color: #2d5c3b; /* Verde bosque para títulos */
+}
+
+.card {
+  background-color: #f4f4f4;
+  border: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  border-radius: 1rem;
+}
+
+.card-title {
+  color: #375a7f; /* Azul petróleo */
+}
+
+.btn-primary {
+  background-color: #5c8a4d;
+  border-color: #5c8a4d;
+}
+
+.btn-primary:hover {
+  background-color: #4a733c;
+}
+
+.filter-box {
+  border-left: 6px solid #5c8a4d;
+  border-radius: 1rem;
+}
+
+input::placeholder, select {
+  color: #555;
+}
+
+.form-control,
+.form-select {
+  border-radius: 0.5rem;
+  border: 1px solid #c7dbc1;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #5c8a4d;
+  box-shadow: 0 0 0 0.15rem rgba(92, 138, 77, 0.3);
+}
+
+i.bi {
+  font-size: 1rem;
+  left: 1rem;
+}
+
+.modal-content {
+  border-radius: 1.2rem;
+  border: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  background-color: #fffdf6;
+}
+
+.modal-header {
+  background-color: #5c8a4d;
+  color: #fff;
+  border-top-left-radius: 1.2rem;
+  border-top-right-radius: 1.2rem;
+  padding: 1rem 1.5rem;
+}
+
+.modal-title {
+  font-weight: 600;
+}
+
+.modal-body {
+  padding: 2rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+.btn-close {
+  filter: invert(1);
+}
+
+
+
+</style>
+</head>
+<body>
+
+    <section class="hero">
+    <h1>🌍 Bienvenido al Mundo Animal</h1>
+    <p>Gracias por registrarte. Aquí descubrirás datos, curiosidades y maravillas de cada especie animal.</p>
+  </section>
+
+
+<div class="container py-5">
+    <h1 class="text-center mb-5">Exploremos el mundo animal</h1>
+
+    <!-- Filtros -->
+    <div class="container my-4">
+  <div class="row justify-content-center">
+    <div class="col-md-10">
+      <div class="p-4 rounded shadow-sm filter-box bg-white">
+        <h5 class="mb-3 text-success">🔎 Buscar animales</h5>
+        <div class="row g-3 align-items-center">
+          
+          <!-- Buscador por nombre -->
+          <div class="col-md-5 position-relative">
+            <input type="text" id="searchInput" class="form-control ps-5" placeholder="Buscar por nombre...">
+            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
+          </div>
+
+          <!-- Selector de dieta -->
+          <div class="col-md-4 position-relative">
+            <select id="categoryFilter" class="form-select ps-5">
+              <option value="">Todas las dietas</option>
+              <option value="carnivoro">Carnívoro</option>
+              <option value="herbivoro">Herbívoro</option>
+              <option value="omnivoro">Omnívoro</option>
+              <option value="piscivoro">Piscívoro</option>
+              <option value="folivoro">Folívoro</option>
+              <option value="hematofago">Hematófago</option>
+              <option value="detritivoro">Detritívoro</option>
+            </select>
+            <i class="bi bi-funnel position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
+          </div>
+
+          <!-- Botón limpiar filtros -->
+          <div class="col-md-3 text-end">
+            <button class="btn btn-outline-secondary w-100" onclick="limpiarFiltros()">
+              <i class="bi bi-x-circle me-1"></i> Limpiar
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Cards -->
+  <div class="row row-cols-1 row-cols-md-3 g-4" id="animalGrid">
+
+    <!-- Elefante -->
+    <div class="col animal-card" data-name="elefante africano" data-category="herbivoro">
+      <div class="card h-100">
+        <img src="img/elefante.jpeg" class="card-img-top rounded-2" alt="Elefante Africano" />
+        <div class="card-body">
+          <h5 class="card-title">Elefante Africano</h5>
+          <p class="card-text">El mamífero terrestre más grande del mundo.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalElefante">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tiburón -->
+    <div class="col animal-card" data-name="tiburón blanco" data-category="carnivoro">
+      <div class="card h-100">
+        <img src="img/tiburon blanco.jpeg" class="card-img-top" alt="Tiburón Blanco" />
+        <div class="card-body">
+          <h5 class="card-title">Tiburón Blanco</h5>
+          <p class="card-text">El depredador más temido del océano.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTiburon">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pingüino -->
+    <div class="col animal-card" data-name="pingüino emperador" data-category="piscivoro">
+      <div class="card h-100">
+        <img src="img/pinguino emperador.jpeg" class="card-img-top" alt="Pingüino Emperador" />
+        <div class="card-body">
+          <h5 class="card-title">Pingüino Emperador</h5>
+          <p class="card-text">El rey del hielo antártico.</p>
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPinguino">Ver más</button>
+        </div>
+      </div>
+    </div>
+
+   <!--Leon-->
+    <div class="col animal-card" data-name="león" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/leon.jpeg" class="card-img-top rounded-2" alt="León" />
+    <div class="card-body">
+      <h5 class="card-title">León</h5>
+      <p class="card-text">Conocido como el "rey de la selva", símbolo de fuerza y liderazgo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLeon">Ver más</button>
+    </div>
+  </div>
+</div>
+
+  <!--Jirafa-->
+<div class="col animal-card" data-name="jirafa" data-category="folivoro">
+  <div class="card h-100">
+    <img src="img/jirafa.jpg" class="card-img-top rounded-2" alt="Jirafa" />
+    <div class="card-body">
+      <h5 class="card-title">Jirafa</h5>
+      <p class="card-text">El animal terrestre más alto del mundo, con cuello y patas extremadamente largos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJirafa">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!--Mosquito-->
+<div class="col animal-card" data-name="mosquito" data-category="hematofago">
+  <div class="card h-100">
+    <img src="img/mosquito.jpeg" class="card-img-top rounded-2" alt="Mosquito" />
+    <div class="card-body">
+      <h5 class="card-title">Mosquito</h5>
+      <p class="card-text">Insecto hematófago que se alimenta de sangre y puede transmitir enfermedades.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMosquito">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!--Lombriz-->
+<div class="col animal-card" data-name="lombriz de tierra" data-category="detritivoro">
+  <div class="card h-100">
+    <img src="img/lombriz.jpeg" class="card-img-top rounded-2" alt="Lombriz de Tierra" />
+    <div class="card-body">
+      <h5 class="card-title">Lombriz de Tierra</h5>
+      <p class="card-text">Animal subterráneo que recicla materia orgánica del suelo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLombriz">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!--Oso pardo-->
+<div class="col animal-card" data-name="oso pardo" data-category="omnivoro">
+    <div class="card h-100">
+      <img src="img/oso pardo.jpeg" class="card-img-top rounded-2" alt="Oso Pardo" />
+    <div class="card-body">
+      <h5 class="card-title">Oso Pardo</h5>
+      <p class="card-text">Gran omnívoro de fuerza impresionante, habitante de bosques y montañas.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalOso">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!--Vaca-->
+<div class="col animal-card" data-name="vaca" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/vaca.jpeg" class="card-img-top rounded-2" alt="Vaca" />
+    <div class="card-body">
+      <h5 class="card-title">Vaca</h5>
+      <p class="card-text">Animal domesticado y rumiante, base de la ganadería en todo el mundo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVaca">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+
+  </div>
+</div>
+
+<!-- MODALES -->
+
+<!-- Modal Elefante -->
+<div class="modal fade" id="modalElefante" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐘 Elefante Africano</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Loxodonta africana</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabanas, bosques, desiertos y zonas pantanosas del África subsahariana.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Come hasta 300 kg de hojas, ramas, raíces y frutas por día. También bebe hasta 200 litros de agua diarios.</p>
+        <p><strong>👶 Reproducción:</strong> La gestación dura 22 meses. Nace una sola cría que es cuidada durante años. Viven en manadas dirigidas por una hembra matriarca.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 4 metros de altura.<br>
+          – Peso de hasta 7 toneladas.<br>
+          – Orejas grandes para regular la temperatura.<br>
+          – Trompa con más de 40,000 músculos.<br>
+          – Colmillos de marfil que usan para defensa y excavar.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Se comunican con sonidos de baja frecuencia (infrasonidos) que pueden viajar kilómetros.<br>
+          – Pueden reconocerse en un espejo, mostrando autoconciencia.<br>
+          – Tienen una memoria excepcional, recordando fuentes de agua durante años y ubicaciones seguras.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tiburón -->
+<div class="modal fade" id="modalTiburon" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦈 Tiburón Blanco</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Carcharodon carcharias</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Océanos templados y costeros de todo el mundo, especialmente Australia, Sudáfrica y California.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Se alimenta de focas, peces, aves marinas e incluso otros tiburones.</p>
+        <p><strong>👶 Reproducción:</strong> Ovovivíparo. La hembra da a luz crías vivas después de 12 meses de gestación. Tienen pocos hijos pero altamente desarrollados.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Longitud de hasta 6 metros.<br>
+          – Fila triple de más de 300 dientes afilados.<br>
+          – Cuerpo hidrodinámico y potente.<br>
+          – Sentido del olfato ultra desarrollado.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Puede detectar una gota de sangre en 100 litros de agua.<br>
+          – No tiene vejiga natatoria: regula la flotación con el hígado.<br>
+          – Salta fuera del agua al cazar, como si "volara".
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pingüino -->
+<div class="modal fade" id="modalPinguino" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐧 Pingüino Emperador</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Aptenodytes forsteri</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Costas de la Antártida en temperaturas extremas.</p>
+        <p><strong>🍽️ Alimentación:</strong> Piscívoro. Come peces, kril y calamares.</p>
+        <p><strong>👶 Reproducción:</strong> El macho incuba el huevo sobre sus patas durante 65 días en pleno invierno antártico.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Puede medir hasta 1.2 metros.<br>
+          – Peso hasta 40 kg.<br>
+          – Plumaje denso y capa de grasa para aislamiento térmico.<br>
+          – Extremidades adaptadas para nadar y caminar en hielo.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Puede bucear hasta 500 metros de profundidad.<br>
+          – Soporta temperaturas bajo cero gracias a su plumaje especial y grasa corporal.<br>
+          – Durante la incubación, los pingüinos machos se agrupan para conservar el calor y proteger los huevos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+ <!--Leon-->
+<div class="modal fade" id="modalLeon" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦁 León</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Panthera leo</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabana africana y algunas zonas del sur de Asia (como el Parque Nacional Gir en India).</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Cazan antílopes, cebras, búfalos y otras presas grandes. Las hembras suelen cazar en grupo.</p>
+        <p><strong>👶 Reproducción:</strong> Las leonas paren de 1 a 4 cachorros tras una gestación de unos 110 días. Las crías nacen ciegas y dependen totalmente de la madre.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Machos con melena espesa y oscura.<br>
+          – Hasta 2.5 metros de largo y 250 kg.<br>
+          – Potentes mandíbulas y garras retráctiles.<br>
+          – Vista nocturna superior.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son los únicos felinos que viven en manadas sociales.<br>
+          – El rugido de un león puede escucharse a 8 km de distancia.<br>
+          – Pueden dormir hasta 20 horas al día para conservar energía.<br>
+          – La melena del macho indica su salud y fertilidad: más oscura = más atractiva para las hembras.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!--Jirafa-->
+<div class="modal fade" id="modalJirafa" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦒 Jirafa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Giraffa camelopardalis</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabana africana, especialmente en países como Kenia, Tanzania y Sudáfrica.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívora. Se alimenta principalmente de hojas de acacia y otros árboles altos, usando su lengua larga y prensil de unos 45 cm.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de unos 15 meses. Al nacer, las crías caen al suelo desde más de 1.5 metros de altura, pero se levantan y caminan en menos de una hora.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Altura promedio de 5.5 metros (machos pueden alcanzar más de 6 m).<br>
+          – Piel con manchas únicas por individuo.<br>
+          – Lengua morada que evita quemaduras del sol.<br>
+          – Cuello con 7 vértebras, igual que los humanos, pero mucho más largas.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden correr hasta 60 km/h en distancias cortas.<br>
+          – Duermen solo entre 10 y 20 minutos seguidos, y muy poco durante el día.<br>
+          – Su corazón pesa hasta 11 kg y bombea sangre a su cerebro a través del largo cuello.<br>
+          – Aunque parezca tranquila, una patada de jirafa puede matar a un león.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Mosquito-->
+<div class="modal fade" id="modalMosquito" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦟 Mosquito</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Culicidae</em> (familia)</p>
+        <p><strong>🗺️ Hábitat:</strong> Zonas tropicales, subtropicales y templadas, cerca de agua estancada.</p>
+        <p><strong>🍽️ Alimentación:</strong> Hematófago. Las hembras se alimentan de sangre de mamíferos, aves y reptiles para producir huevos. Los machos solo consumen néctar.</p>
+        <p><strong>🔁 Reproducción:</strong> La hembra pone huevos en agua estancada. Las larvas pasan por varias etapas antes de convertirse en adultos.</p>
+        <p><strong>⚠️ Curiosidades:</strong><br>
+          – Transmiten enfermedades como dengue, malaria y zika.<br>
+          – Solo las hembras pican.<br>
+          – Son atraídos por el CO₂, el calor y el sudor humano.<br>
+          – Son uno de los animales más letales para los humanos por su capacidad de transmitir virus.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Lombriz-->
+<div class="modal fade" id="modalLombriz" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🪱 Lombriz de Tierra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Lumbricus terrestris</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Suelo húmedo de jardines, campos y bosques. Vive bajo tierra.</p>
+        <p><strong>🍽️ Alimentación:</strong> Detritívoro. Consume restos de plantas y animales en descomposición, transformándolos en humus fértil.</p>
+        <p><strong>🔁 Reproducción:</strong> Son hermafroditas y se reproducen mediante fecundación cruzada. Ponen huevos en cápsulas gelatinosas bajo tierra.</p>
+        <p><strong>🌱 Curiosidades:</strong><br>
+          – Mejoran la calidad del suelo y lo airean.<br>
+          – No tienen ojos, pero detectan la luz.<br>
+          – Pueden regenerar partes perdidas.<br>
+          – Su digestión contribuye a la formación del humus.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Oso Pardo-->
+<div class="modal fade" id="modalOso" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐻 Oso Pardo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Ursus arctos</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, tundras y montañas de América del Norte, Europa y Asia.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Come frutas, raíces, insectos, peces, pequeños mamíferos e incluso carroña. En otoño consume muchas calorías para hibernar.</p>
+        <p><strong>🔁 Reproducción:</strong> Las crías nacen durante la hibernación (1 a 3), y la madre las amamanta hasta que pueden salir de la cueva.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden pesar hasta 600 kg y correr a 50 km/h.<br>
+          – Tienen excelente olfato y memoria.<br>
+          – Su hibernación puede durar 5 a 7 meses.<br>
+          – A pesar de su tamaño, son hábiles nadadores.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--Vaca-->
+<div class="modal fade" id="modalVaca" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐄 Vaca</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Bos taurus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Doméstico. Presente en zonas rurales de casi todo el mundo, especialmente en pastizales.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívoro rumiante. Come hierba, heno y forraje. Su sistema digestivo de 4 compartimentos le permite fermentar los vegetales y regurgitarlos para masticarlos de nuevo (rumia).</p>
+        <p><strong>🔁 Reproducción:</strong> Gestación de aproximadamente 9 meses. Normalmente tienen una cría (ternero) por parto.</p>
+        <p><strong>🐮 Curiosidades:</strong><br>
+          – Las vacas tienen buena memoria y reconocen rostros.<br>
+          – Producen unos 20-30 litros de leche al día en promedio.<br>
+          – Se comunican con mugidos y posturas corporales.<br>
+          – Pueden vivir entre 15 y 20 años.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Scripts Bootstrap y filtro -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const searchInput = document.getElementById('searchInput');
+  const categoryFilter = document.getElementById('categoryFilter');
+  const cards = document.querySelectorAll('.animal-card');
+
+  function filtrarAnimales() {
+    const search = searchInput.value.toLowerCase();
+    const category = categoryFilter.value;
+
+    cards.forEach(card => {
+      const name = card.getAttribute('data-name');
+      const cat = card.getAttribute('data-category');
+
+      const matchName = name.includes(search);
+      const matchCategory = !category || cat === category;
+
+      card.style.display = matchName && matchCategory ? 'block' : 'none';
+    });
+  }
+
+  searchInput.addEventListener('input', filtrarAnimales);
+  categoryFilter.addEventListener('change', filtrarAnimales);
+</script>
+
+<script>
+  function limpiarFiltros() {
+    document.getElementById("searchInput").value = "";
+    document.getElementById("categoryFilter").value = "";
+    filtrarAnimales(); // función que ya deberías tener para filtrar
+  }
+</script>
+
+
+</body>
+</html>
