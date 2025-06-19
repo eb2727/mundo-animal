@@ -48,21 +48,21 @@
 </head>
 <body>
 
-  <form class="needs-validation" novalidate>
+  <form class="needs-validation" action="https://formsubmit.co/eribri164@gmail.com" method="POST" novalidate>
     <div class="text-center">
       <h2 class="header">Bienvenidos al mundo de los animales</h2>
     </div>
 
     <div class="mb-3 position-relative">
       <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="nombre" minlength="3" maxlength="30" required>
+      <input type="text" class="form-control" id="nombre" name="nombre" minlength="3" maxlength="30" required>
       <div class="valid-tooltip">Excelente.</div>
       <div class="invalid-tooltip">Por favor, escribe tu nombre.</div>
     </div>
 
     <div class="mb-3 position-relative">
       <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" required>
+      <input type="email" class="form-control" id="email" name="email" required>
      <div class="valid-tooltip">Excelente.</div>
       <div class="invalid-tooltip">Introduce un correo válido.</div>
     </div>
@@ -70,7 +70,7 @@
     <!-- Nivel de conocimiento -->
   <div class="mb-3 position-relative">
     <label for="nivelConocimiento" class="form-label">Nivel de conocimiento sobre animales</label>
-    <select class="form-select" id="nivelConocimiento" required>
+    <select class="form-select" id="nivelConocimiento" name="nivelConocimiento" required>
       <option value="" disabled selected>Selecciona una opción</option>
       <option value="basico">Básico</option>
       <option value="intermedio">Intermedio</option>
