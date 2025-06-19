@@ -116,7 +116,7 @@ i.bi {
     <h1 class="text-center mb-5">Exploremos el mundo animal</h1>
 
     <!-- Filtros -->
-    <div class="container my-4">
+    <div class="container m-5">
   <div class="row justify-content-center">
     <div class="col-md-10">
       <div class="p-4 rounded shadow-sm filter-box bg-white">
@@ -268,6 +268,41 @@ i.bi {
   </div>
 </div>
 
+<!-- Tigre --> 
+<div class="col animal-card" data-name="tigre" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/tigre.jpeg" class="card-img-top rounded-2" alt="Tigre" />
+    <div class="card-body">
+      <h5 class="card-title">Tigre</h5>
+      <p class="card-text">Gran felino conocido por sus rayas distintivas y fuerza.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTigre">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cebra --> 
+<div class="col animal-card" data-name="cebra" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/cebra.jpeg" class="card-img-top rounded-2" alt="Cebra" />
+    <div class="card-body">
+      <h5 class="card-title">Cebra</h5>
+      <p class="card-text">Mamífero africano conocido por su pelaje rayado blanco y negro.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCebra">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Golden Retriever --> 
+<div class="col animal-card" data-name="golden retriever" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/golden retriever.jpeg" class="card-img-top rounded-2" alt="Golden Retriever" />
+    <div class="card-body">
+      <h5 class="card-title">Golden Retriever</h5>
+      <p class="card-text">Perro de raza popular, amable e inteligente.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGolden">Ver más</button>
+    </div>
+  </div>
+</div>
 
 
   </div>
@@ -513,6 +548,92 @@ i.bi {
           – Producen unos 20-30 litros de leche al día en promedio.<br>
           – Se comunican con mugidos y posturas corporales.<br>
           – Pueden vivir entre 15 y 20 años.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Tigre -->
+<div class="modal fade" id="modalTigre" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐅 Tigre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Panthera tigris</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Selvas, bosques y manglares de Asia, desde Siberia hasta Indonesia.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Se alimenta principalmente de grandes mamíferos como ciervos, jabalíes y búfalos.</p>
+        <p><strong>👶 Reproducción:</strong> La gestación dura aproximadamente 3.5 meses. Nacen entre 2 y 4 crías, que son cuidadas por la madre hasta su independencia.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Puede medir hasta 3 metros de longitud incluyendo la cola.<br>
+          – Pesa hasta 300 kg.<br>
+          – Su pelaje tiene rayas negras únicas que le permiten camuflarse.<br>
+          – Excelente nadador y corredor en distancias cortas.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Cada tigre tiene un patrón único de rayas, similar a las huellas digitales humanas.<br>
+          – Son los únicos grandes felinos que disfrutan nadar.<br>
+          – Tienen una fuerza y agilidad increíbles, capaces de derribar presas mucho más grandes que ellos.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Cebra -->
+<div class="modal fade" id="modalCebra" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦓 Cebra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Equus quagga</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabanas, pastizales y zonas abiertas del África subsahariana.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívora. Se alimenta de pasto, hojas, tallos y cortezas. Puede sobrevivir con poca agua.</p>
+        <p><strong>👶 Reproducción:</strong> El período de gestación es de 12-13 meses. Nace una sola cría, que camina a los pocos minutos y es protegida por la manada.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Tamaño de 1.2 a 1.5 metros de altura a la cruz.<br>
+          – Peso entre 250 y 450 kg.<br>
+          – Pelaje blanco con rayas negras, patrón único en cada individuo.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Las rayas ayudan a disuadir insectos y confundir depredadores.<br>
+          – Son animales sociales, viven en manadas.<br>
+          – Se comunican con relinchos, orejas y expresiones faciales.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Golden Retriever -->
+<div class="modal fade" id="modalGolden" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐕 Golden Retriever</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Canis lupus familiaris</em></p>
+        <p><strong>🗺️ Origen:</strong> Reino Unido, desarrollado como perro de caza y recuperación.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Su dieta incluye croquetas, carne, vegetales, arroz y frutas.</p>
+        <p><strong>👶 Reproducción:</strong> El período de gestación es de 63 días. Las camadas suelen tener entre 6 y 10 cachorros.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Tamaño mediano a grande (55–61 cm de altura).<br>
+          – Peso entre 25 y 34 kg.<br>
+          – Pelaje denso, dorado, largo y repelente al agua.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Muy inteligentes, aprenden órdenes con rapidez.<br>
+          – Se usan como perros de servicio, guía y terapia.<br>
+          – Les encanta el agua y jugar a recuperar objetos.<br>
         </p>
       </div>
     </div>
