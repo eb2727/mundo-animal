@@ -104,25 +104,28 @@ i.bi {
 
 </style>
 </head>
+
 <body>
 
-    <section class="hero">
+  <!-- Hero -->
+  <section class="hero text-center m-5">
     <h1>🌍 Bienvenido al Mundo Animal</h1>
     <p>Gracias por registrarte. Aquí descubrirás datos, curiosidades y maravillas de cada especie animal.</p>
   </section>
 
+  <div class="text-center m-5">
+    <h1>Exploremos el mundo animal</h1>
+  </div>
 
-<div class="container py-5">
-    <h1 class="text-center mb-5">Exploremos el mundo animal</h1>
+  <!-- Contenido principal -->
+  <div class="container text-center m-5">
 
     <!-- Filtros -->
-    <div class="container m-5">
-  <div class="row justify-content-center">
-    <div class="col-md-10">
+    <div class="mb-4">
       <div class="p-4 rounded shadow-sm filter-box bg-white">
         <h5 class="mb-3 text-success">🔎 Buscar animales</h5>
         <div class="row g-3 align-items-center">
-          
+
           <!-- Buscador por nombre -->
           <div class="col-md-5 position-relative">
             <input type="text" id="searchInput" class="form-control ps-5" placeholder="Buscar por nombre...">
@@ -144,7 +147,7 @@ i.bi {
             <i class="bi bi-funnel position-absolute top-50 start-0 translate-middle-y ps-3 text-muted"></i>
           </div>
 
-          <!-- Botón limpiar filtros -->
+          <!-- Botón limpiar -->
           <div class="col-md-3 text-end">
             <button class="btn btn-outline-secondary w-100" onclick="limpiarFiltros()">
               <i class="bi bi-x-circle me-1"></i> Limpiar
@@ -154,25 +157,23 @@ i.bi {
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-  <!-- Cards -->
-  <div class="row row-cols-1 row-cols-md-3 g-4" id="animalGrid">
+    <!-- Cards de animales -->
+    <div class="row row-cols-1 row-cols-md-3 g-4" id="animalGrid">
 
-    <!-- Elefante -->
-    <div class="col animal-card" data-name="elefante africano" data-category="herbivoro">
-      <div class="card h-100">
-        <img src="img/elefante.jpeg" class="card-img-top rounded-2" alt="Elefante Africano" />
-        <div class="card-body">
-          <h5 class="card-title">Elefante Africano</h5>
-          <p class="card-text">El mamífero terrestre más grande del mundo.</p>
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalElefante">Ver más</button>
+      <!-- Ejemplo: Elefante -->
+      <div class="col animal-card" data-name="elefante africano" data-category="herbivoro">
+        <div class="card h-100">
+          <img src="img/elefante.jpeg" class="card-img-top rounded-2" alt="Elefante Africano" />
+          <div class="card-body">
+            <h5 class="card-title">Elefante Africano</h5>
+            <p class="card-text">El mamífero terrestre más grande del mundo.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalElefante">Ver más</button>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Tiburón -->
+     <!-- Tiburón -->
     <div class="col animal-card" data-name="tiburón blanco" data-category="carnivoro">
       <div class="card h-100">
         <img src="img/tiburon blanco.jpeg" class="card-img-top" alt="Tiburón Blanco" />
@@ -375,6 +376,706 @@ i.bi {
     </div>
   </div>
 </div>
+
+<!-- Camello -->
+<div class="col animal-card" data-name="camello" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/camello.jpeg" class="card-img-top rounded-2" alt="Camello" />
+    <div class="card-body">
+      <h5 class="card-title">Camello</h5>
+      <p class="card-text">Mamífero adaptado a climas áridos y extremos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCamello">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Calamar -->
+<div class="col animal-card" data-name="calamar" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/calamar.jpeg" class="card-img-top rounded-2" alt="Calamar" />
+    <div class="card-body">
+      <h5 class="card-title">Calamar</h5>
+      <p class="card-text">Molusco marino con gran agilidad y tentáculos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCalamar">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Águila -->
+<div class="col animal-card" data-name="aguila" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/aguila.jpeg" class="card-img-top rounded-2" alt="Águila" />
+    <div class="card-body">
+      <h5 class="card-title">Águila</h5>
+      <p class="card-text">Ave rapaz de visión aguda y vuelo majestuoso.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAguila">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Canguro -->
+<div class="col animal-card" data-name="canguro" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/canguro.jpeg" class="card-img-top rounded-2" alt="Canguro" />
+    <div class="card-body">
+      <h5 class="card-title">Canguro</h5>
+      <p class="card-text">Marsupial famoso por sus saltos y su bolsa abdominal.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCanguro">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Zorro -->
+<div class="col animal-card" data-name="zorro" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/zorro.jpeg" class="card-img-top rounded-2" alt="Zorro" />
+    <div class="card-body">
+      <h5 class="card-title">Zorro</h5>
+      <p class="card-text">Mamífero ágil y astuto, habitante de múltiples entornos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalZorro">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Avestruz -->
+<div class="col animal-card" data-name="avestruz" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/avestruz.jpeg" class="card-img-top rounded-2" alt="Avestruz" />
+    <div class="card-body">
+      <h5 class="card-title">Avestruz</h5>
+      <p class="card-text">El ave más grande y rápida del planeta, aunque no vuela.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAvestruz">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Gorila -->
+<div class="col animal-card" data-name="gorila" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/gorila.jpeg" class="card-img-top rounded-2" alt="Gorila" />
+    <div class="card-body">
+      <h5 class="card-title">Gorila</h5>
+      <p class="card-text">El primate más grande y fuerte del planeta.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGorila">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hipopótamo -->
+<div class="col animal-card" data-name="hipopotamo" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/hipopotamo.jpeg" class="card-img-top rounded-2" alt="Hipopótamo" />
+    <div class="card-body">
+      <h5 class="card-title">Hipopótamo</h5>
+      <p class="card-text">Uno de los animales más peligrosos de África.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHipopotamo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Jabalí -->
+<div class="col animal-card" data-name="jabali" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/jabali.jpeg" class="card-img-top rounded-2" alt="Jabalí" />
+    <div class="card-body">
+      <h5 class="card-title">Jabalí</h5>
+      <p class="card-text">Antepasado salvaje del cerdo doméstico.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJabali">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Cocodrilo -->
+<div class="col animal-card" data-name="cocodrilo" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/cocodrilo.jpeg" class="card-img-top rounded-2" alt="Cocodrilo" />
+    <div class="card-body">
+      <h5 class="card-title">Cocodrilo</h5>
+      <p class="card-text">Reptil acuático con una mordida letal.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCocodrilo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Chita -->
+<div class="col animal-card" data-name="guepardo" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/chita.jpeg" class="card-img-top rounded-2" alt="Chita" />
+    <div class="card-body">
+      <h5 class="card-title">Chita (Guepardo)</h5>
+      <p class="card-text">El animal terrestre más rápido del mundo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalChita">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Hiena -->
+<div class="col animal-card" data-name="hiena" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/hiena.jpeg" class="card-img-top rounded-2" alt="Hiena" />
+    <div class="card-body">
+      <h5 class="card-title">Hiena</h5>
+      <p class="card-text">Famosa por su risa y gran capacidad de caza.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalHiena">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Mono -->
+<div class="col animal-card" data-name="mono" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/mono.jpeg" class="card-img-top rounded-2" alt="Mono" />
+    <div class="card-body">
+      <h5 class="card-title">Mono</h5>
+      <p class="card-text">Mamífero inteligente y muy sociable.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMono">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Búfalo -->
+<div class="col animal-card" data-name="bufalo" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/bufalo.jpeg" class="card-img-top rounded-2" alt="Búfalo" />
+    <div class="card-body">
+      <h5 class="card-title">Búfalo</h5>
+      <p class="card-text">Mamífero herbívoro de gran fuerza y resistencia.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBufalo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Buitre -->
+<div class="col animal-card" data-name="buitre" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/vuitre.jpeg" class="card-img-top rounded-2" alt="Buitre" />
+    <div class="card-body">
+      <h5 class="card-title">Buitre</h5>
+      <p class="card-text">Ave carroñera clave en los ecosistemas.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBuitre">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Tortuga -->
+<div class="col animal-card" data-name="tortuga" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/tortuga.jpeg" class="card-img-top rounded-2" alt="Tortuga" />
+    <div class="card-body">
+      <h5 class="card-title">Tortuga</h5>
+      <p class="card-text">Reptil de caparazón duro y vida longeva.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTortuga">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Ballena Azul -->
+<div class="col animal-card" data-name="ballena azul" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/ballena azul.jpeg" class="card-img-top rounded-2" alt="Ballena Azul" />
+    <div class="card-body">
+      <h5 class="card-title">Ballena Azul</h5>
+      <p class="card-text">El animal más grande del planeta.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBallena">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Oso Polar -->
+<div class="col animal-card" data-name="oso polar" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/oso polar.jpeg" class="card-img-top rounded-2" alt="Oso Polar" />
+    <div class="card-body">
+      <h5 class="card-title">Oso Polar</h5>
+      <p class="card-text">Depredador ártico adaptado al hielo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalOsoPolar">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cerdo -->
+<div class="col animal-card" data-name="cerdo" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/cerdo.jpg" class="card-img-top rounded-2" alt="Cerdo" />
+    <div class="card-body">
+      <h5 class="card-title">Cerdo</h5>
+      <p class="card-text">Mamífero inteligente y domesticado por el ser humano.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCerdo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Oveja -->
+<div class="col animal-card" data-name="oveja" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/oveja.jpg" class="card-img-top rounded-2" alt="Oveja" />
+    <div class="card-body">
+      <h5 class="card-title">Oveja</h5>
+      <p class="card-text">Animal de pastoreo criado por su lana y carne.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalOveja">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Cabra -->
+<div class="col animal-card" data-name="cabra" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/cabra.jpg" class="card-img-top rounded-2" alt="Cabra" />
+    <div class="card-body">
+      <h5 class="card-title">Cabra</h5>
+      <p class="card-text">Animal ágil criado por su leche, carne y piel.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCabra">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Conejo -->
+<div class="col animal-card" data-name="conejo" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/conejo.jpg" class="card-img-top rounded-2" alt="Conejo" />
+    <div class="card-body">
+      <h5 class="card-title">Conejo</h5>
+      <p class="card-text">Pequeño mamífero conocido por sus largas orejas y gran agilidad.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalConejo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Burro -->
+<div class="col animal-card" data-name="burro" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/burro.jpg" class="card-img-top rounded-2" alt="Burro" />
+    <div class="card-body">
+      <h5 class="card-title">Burro</h5>
+      <p class="card-text">Animal de carga resistente y dócil utilizado en zonas rurales.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalBurro">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mula -->
+<div class="col animal-card" data-name="mula" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/mula.jpg" class="card-img-top rounded-2" alt="Mula" />
+    <div class="card-body">
+      <h5 class="card-title">Mula</h5>
+      <p class="card-text">Híbrido entre yegua y burro, muy fuerte y resistente al trabajo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMula">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Gallo -->
+<div class="col animal-card" data-name="gallo" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/gallo.jpg" class="card-img-top rounded-2" alt="Gallo" />
+    <div class="card-body">
+      <h5 class="card-title">Gallo</h5>
+      <p class="card-text">Ave doméstica conocida por su canto al amanecer.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGallo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Pollo -->
+<div class="col animal-card" data-name="pollo" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/pollo.jpg" class="card-img-top rounded-2" alt="Pollo" />
+    <div class="card-body">
+      <h5 class="card-title">Pollo</h5>
+      <p class="card-text">Cría de la gallina, muy común en granjas y hogares.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPollo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Paloma -->
+<div class="col animal-card" data-name="paloma" data-category="granivoro">
+  <div class="card h-100">
+    <img src="img/paloma.jpg" class="card-img-top rounded-2" alt="Paloma" />
+    <div class="card-body">
+      <h5 class="card-title">Paloma</h5>
+      <p class="card-text">Ave símbolo de la paz, presente en muchas ciudades del mundo.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPaloma">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Canario -->
+<div class="col animal-card" data-name="canario" data-category="granivoro">
+  <div class="card h-100">
+    <img src="img/canario.jpg" class="card-img-top rounded-2" alt="Canario" />
+    <div class="card-body">
+      <h5 class="card-title">Canario</h5>
+      <p class="card-text">Pequeña ave conocida por su canto melodioso.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCanario">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Ganso -->
+<div class="col animal-card" data-name="ganso" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/ganso.jpg" class="card-img-top rounded-2" alt="Ganso" />
+    <div class="card-body">
+      <h5 class="card-title">Ganso</h5>
+      <p class="card-text">Ave de granja conocida por su fuerte instinto territorial.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalGanso">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Pato -->
+<div class="col animal-card" data-name="pato" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/pato.jpg" class="card-img-top rounded-2" alt="Pato" />
+    <div class="card-body">
+      <h5 class="card-title">Pato</h5>
+      <p class="card-text">Ave acuática común en lagos, ríos y estanques.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPato">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Chimpancé -->
+<div class="col animal-card" data-name="chimpance" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/chimpance.jpg" class="card-img-top rounded-2" alt="Chimpancé" />
+    <div class="card-body">
+      <h5 class="card-title">Chimpancé</h5>
+      <p class="card-text">Uno de los primates más inteligentes y sociales.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalChimpance">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Orangután -->
+<div class="col animal-card" data-name="orangutan" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/orangutan.jpg" class="card-img-top rounded-2" alt="Orangután" />
+    <div class="card-body">
+      <h5 class="card-title">Orangután</h5>
+      <p class="card-text">Gran simio de Asia, hábil trepador y solitario.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalOrangutan">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Antílope -->
+<div class="col animal-card" data-name="antilope" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/antilope.jpg" class="card-img-top rounded-2" alt="Antílope" />
+    <div class="card-body">
+      <h5 class="card-title">Antílope</h5>
+      <p class="card-text">Mamífero veloz de sabanas y pastizales africanos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAntilope">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Koala -->
+<div class="col animal-card" data-name="koala" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/koala.jpg" class="card-img-top rounded-2" alt="Koala" />
+    <div class="card-body">
+      <h5 class="card-title">Koala</h5>
+      <p class="card-text">Marsupial dormilón de los eucaliptos australianos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalKoala">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Lobo -->
+<div class="col animal-card" data-name="lobo" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/lobo.jpg" class="card-img-top rounded-2" alt="Lobo" />
+    <div class="card-body">
+      <h5 class="card-title">Lobo</h5>
+      <p class="card-text">El ancestro salvaje del perro doméstico.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLobo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Mapache -->
+<div class="col animal-card" data-name="mapache" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/mapache.jpg" class="card-img-top rounded-2" alt="Mapache" />
+    <div class="card-body">
+      <h5 class="card-title">Mapache</h5>
+      <p class="card-text">Animal nocturno famoso por su máscara facial.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMapache">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Ardilla -->
+<div class="col animal-card" data-name="ardilla" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/ardilla.jpg" class="card-img-top rounded-2" alt="Ardilla" />
+    <div class="card-body">
+      <h5 class="card-title">Ardilla</h5>
+      <p class="card-text">Ágil roedor trepador de árboles y amante de las nueces.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArdilla">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Armadillo -->
+<div class="col animal-card" data-name="armadillo" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/armadillo.jpg" class="card-img-top rounded-2" alt="Armadillo" />
+    <div class="card-body">
+      <h5 class="card-title">Armadillo</h5>
+      <p class="card-text">Mamífero acorazado con caparazón natural.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalArmadillo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Erizo -->
+<div class="col animal-card" data-name="erizo" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/erizo.jpg" class="card-img-top rounded-2" alt="Erizo" />
+    <div class="card-body">
+      <h5 class="card-title">Erizo</h5>
+      <p class="card-text">Pequeño mamífero cubierto de púas defensivas.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalErizo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Puercoespín -->
+<div class="col animal-card" data-name="puercoespin" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/puercoespin.jpg" class="card-img-top rounded-2" alt="Puercoespín" />
+    <div class="card-body">
+      <h5 class="card-title">Puercoespín</h5>
+      <p class="card-text">Defiende su territorio con púas afiladas.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPuercoespin">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Topo -->
+<div class="col animal-card" data-name="topo" data-category="insectivoro">
+  <div class="card h-100">
+    <img src="img/topo.jpg" class="card-img-top rounded-2" alt="Topo" />
+    <div class="card-body">
+      <h5 class="card-title">Topo</h5>
+      <p class="card-text">Pequeño excavador experto en túneles subterráneos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalTopo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Alce -->
+<div class="col animal-card" data-name="alce" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/alce.jpg" class="card-img-top rounded-2" alt="Alce" />
+    <div class="card-body">
+      <h5 class="card-title">Alce</h5>
+      <p class="card-text">El cérvido más grande del mundo, con impresionantes astas.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalAlce">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Ciervo -->
+<div class="col animal-card" data-name="ciervo" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/ciervo.jpg" class="card-img-top rounded-2" alt="Ciervo" />
+    <div class="card-body">
+      <h5 class="card-title">Ciervo</h5>
+      <p class="card-text">Elegante habitante de los bosques con cornamenta ramificada.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalCiervo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Venado -->
+<div class="col animal-card" data-name="venado" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/venado.jpg" class="card-img-top rounded-2" alt="Venado" />
+    <div class="card-body">
+      <h5 class="card-title">Venado</h5>
+      <p class="card-text">Mamífero ágil y veloz, símbolo de agudeza y ligereza.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalVenado">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Pantera -->
+<div class="col animal-card" data-name="pantera" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/pantera.jpg" class="card-img-top rounded-2" alt="Pantera" />
+    <div class="card-body">
+      <h5 class="card-title">Pantera</h5>
+      <p class="card-text">Felino misterioso y ágil de pelaje oscuro.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPantera">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Puma -->
+<div class="col animal-card" data-name="puma" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/puma.jpg" class="card-img-top rounded-2" alt="Puma" />
+    <div class="card-body">
+      <h5 class="card-title">Puma</h5>
+      <p class="card-text">Gran felino americano, silencioso y solitario.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalPuma">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Jaguar -->
+<div class="col animal-card" data-name="jaguar" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/jaguar.jpg" class="card-img-top rounded-2" alt="Jaguar" />
+    <div class="card-body">
+      <h5 class="card-title">Jaguar</h5>
+      <p class="card-text">Poderoso felino de América con manchas características.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalJaguar">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Dromedario -->
+<div class="col animal-card" data-name="dromedario" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/dromedario.jpg" class="card-img-top rounded-2" alt="Dromedario" />
+    <div class="card-body">
+      <h5 class="card-title">Dromedario</h5>
+      <p class="card-text">Camello de una sola joroba, adaptado a climas áridos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDromedario">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Ñu -->
+<div class="col animal-card" data-name="nu" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/nu.jpg" class="card-img-top rounded-2" alt="Ñu" />
+    <div class="card-body">
+      <h5 class="card-title">Ñu</h5>
+      <p class="card-text">Gran antílope africano conocido por sus migraciones masivas.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNu">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Suricata -->
+<div class="col animal-card" data-name="suricata" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/suricata.jpg" class="card-img-top rounded-2" alt="Suricata" />
+    <div class="card-body">
+      <h5 class="card-title">Suricata</h5>
+      <p class="card-text">Pequeño mamífero social y vigilante del desierto.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSuricata">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Zorrillo -->
+<div class="col animal-card" data-name="zorrillo" data-category="omnivoro">
+  <div class="card h-100">
+    <img src="img/zorrillo.jpg" class="card-img-top rounded-2" alt="Zorrillo" />
+    <div class="card-body">
+      <h5 class="card-title">Zorrillo</h5>
+      <p class="card-text">Famoso por su defensa con un olor fuerte y desagradable.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalZorrillo">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Lémur -->
+<div class="col animal-card" data-name="lemur" data-category="herbivoro">
+  <div class="card h-100">
+    <img src="img/lemur.jpg" class="card-img-top rounded-2" alt="Lémur" />
+    <div class="card-body">
+      <h5 class="card-title">Lémur</h5>
+      <p class="card-text">Primate endémico de Madagascar, de ojos grandes y cola larga.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalLemur">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Nutria -->
+<div class="col animal-card" data-name="nutria" data-category="carnivoro">
+  <div class="card h-100">
+    <img src="img/nutria.jpg" class="card-img-top rounded-2" alt="Nutria" />
+    <div class="card-body">
+      <h5 class="card-title">Nutria</h5>
+      <p class="card-text">Mamífero semiacuático experto nadador y pescador.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalNutria">Ver más</button>
+    </div>
+  </div>
+</div>
+
+<!-- Delfín -->
+<div class="col animal-card" data-name="delfin" data-category="mamifero">
+  <div class="card h-100">
+    <img src="img/delfin.jpg" class="card-img-top rounded-2" alt="Delfín" />
+    <div class="card-body">
+      <h5 class="card-title">Delfín</h5>
+      <p class="card-text">Mamífero marino inteligente y sociable.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalDelfin">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Mantarraya -->
+<div class="col animal-card" data-name="mantarraya" data-category="pez">
+  <div class="card h-100">
+    <img src="img/mantarraya.jpg" class="card-img-top rounded-2" alt="Mantarraya" />
+    <div class="card-body">
+      <h5 class="card-title">Mantarraya</h5>
+      <p class="card-text">Pez plano gigante que nada elegantemente en los océanos.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMantarraya">Ver más</button>
+    </div>
+  </div>
+</div>
+   
+
+<!-- Salmón -->
+<div class="col animal-card" data-name="salmon" data-category="pez">
+  <div class="card h-100">
+    <img src="img/salmon.jpg" class="card-img-top rounded-2" alt="Salmón" />
+    <div class="card-body">
+      <h5 class="card-title">Salmón</h5>
+      <p class="card-text">Pez migratorio famoso por su increíble travesía.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalSalmon">Ver más</button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Medusa -->
+<div class="col animal-card" data-name="medusa" data-category="invertebrado">
+  <div class="card h-100">
+    <img src="img/medusa.jpg" class="card-img-top rounded-2" alt="Medusa" />
+    <div class="card-body">
+      <h5 class="card-title">Medusa</h5>
+      <p class="card-text">Invertebrado marino con cuerpo gelatinoso y tentáculos urticantes.</p>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMedusa">Ver más</button>
+    </div>
+  </div>
+</div>
+
 
 
   </div>
@@ -881,41 +1582,1506 @@ i.bi {
   </div>
 </div>
 
+<!-- Modal Camello -->
+<div class="modal fade" id="modalCamello" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐫 Camello</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Camelus dromedarius</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Desiertos de África del Norte, Medio Oriente y Asia.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Se alimenta de pastos secos, hojas y arbustos espinosos.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de unos 13 meses. Nace una sola cría que permanece con la madre durante años.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Una joroba que almacena grasa, no agua.<br>
+          – Puede cerrar las narinas para evitar el polvo.<br>
+          – Largos párpados y pestañas para protegerse de la arena.<br>
+          – Resiste temperaturas extremas y largos periodos sin agua.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Puede beber hasta 100 litros de agua en minutos.<br>
+          – Puede caminar 40 km al día cargando grandes pesos.<br>
+          – Su orina es espesa y su excremento casi seco, para conservar líquidos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!-- Scripts Bootstrap y filtro -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-  const searchInput = document.getElementById('searchInput');
-  const categoryFilter = document.getElementById('categoryFilter');
-  const cards = document.querySelectorAll('.animal-card');
+<!-- Modal Calamar -->
+<div class="modal fade" id="modalCalamar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦑 Calamar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Teuthida</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Océanos de todo el mundo, a diversas profundidades.</p>
+        <p><strong>🥩 Alimentación:</strong> Carnívoro. Se alimenta de peces, crustáceos y otros moluscos.</p>
+        <p><strong>👶 Reproducción:</strong> Ponen miles de huevos. Los adultos suelen morir después del apareamiento.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – 8 brazos y 2 tentáculos con ventosas.<br>
+          – Tienen un pico similar al de un loro para desgarrar presas.<br>
+          – Cuerpo hidrodinámico para moverse a gran velocidad.<br>
+          – Expulsan tinta como mecanismo de defensa.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Algunos calamares gigantes miden más de 10 metros.<br>
+          – Cambian de color gracias a células llamadas cromatóforos.<br>
+          – Tienen uno de los cerebros más desarrollados entre los invertebrados.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  function filtrarAnimales() {
-    const search = searchInput.value.toLowerCase();
-    const category = categoryFilter.value;
+<!-- Modal Águila -->
+<div class="modal fade" id="modalAguila" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦅 Águila</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Aquila chrysaetos</em> (Águila real, como ejemplo)</p>
+        <p><strong>🗺️ Hábitat:</strong> Montañas, llanuras y regiones boscosas de Europa, Asia y América del Norte.</p>
+        <p><strong>🥩 Alimentación:</strong> Carnívora. Caza conejos, roedores, aves y reptiles.</p>
+        <p><strong>👶 Reproducción:</strong> La hembra pone de 1 a 3 huevos. Ambos padres cuidan a los polluelos por varias semanas.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Envergadura de alas de hasta 2,5 metros.<br>
+          – Pico curvo y garras afiladas.<br>
+          – Vista 8 veces más aguda que la humana.<br>
+          – Vuela a más de 200 km/h en picada.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Símbolo de poder en muchas culturas.<br>
+          – Puede detectar presas a kilómetros de distancia.<br>
+          – Algunas especies viven más de 30 años en libertad.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-    cards.forEach(card => {
-      const name = card.getAttribute('data-name');
-      const cat = card.getAttribute('data-category');
+<!-- Modal Canguro -->
+<div class="modal fade" id="modalCanguro" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦘 Canguro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Macropus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Llanuras, bosques y sabanas de Australia.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Se alimenta de hierbas, brotes y hojas.</p>
+        <p><strong>👶 Reproducción:</strong> Las crías nacen muy pequeñas y se desarrollan en la bolsa marsupial de la madre durante varios meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Patas traseras fuertes y largas para saltar.<br>
+          – Cola musculosa que usa para equilibrarse.<br>
+          – Pueden alcanzar velocidades de hasta 70 km/h.<br>
+          – Tienen buena visión nocturna.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – No pueden caminar hacia atrás.<br>
+          – Su salto puede alcanzar hasta 9 metros de longitud.<br>
+          – El canguro rojo es el marsupial más grande del mundo.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-      const matchName = name.includes(search);
-      const matchCategory = !category || cat === category;
+<!-- Modal Zorro -->
+<div class="modal fade" id="modalZorro" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦊 Zorro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Vulpes vulpes</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, praderas, desiertos y zonas urbanas.</p>
+        <p><strong>🥩 Alimentación:</strong> Omnívoro. Come pequeños mamíferos, frutas, insectos y huevos.</p>
+        <p><strong>👶 Reproducción:</strong> La gestación dura alrededor de 50 días. La madre cuida de 4 a 6 cachorros.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hocico fino y orejas puntiagudas.<br>
+          – Cola larga y espesa que ayuda al equilibrio.<br>
+          – Pelaje espeso que cambia de color según la estación.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Tiene un excelente oído, capaz de detectar roedores bajo la nieve.<br>
+          – Es famoso en cuentos y mitologías como símbolo de astucia.<br>
+          – Puede adaptarse fácilmente a entornos urbanos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-      card.style.display = matchName && matchCategory ? 'block' : 'none';
-    });
-  }
+<!-- Modal Avestruz -->
+<div class="modal fade" id="modalAvestruz" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🪿 Avestruz</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Struthio camelus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Zonas áridas y sabanas de África.</p>
+        <p><strong>🥩 Alimentación:</strong> Omnívora. Come semillas, frutas, insectos y pequeños animales.</p>
+        <p><strong>👶 Reproducción:</strong> Las hembras ponen grandes huevos. Los machos suelen incubarlos y cuidar de los polluelos.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 2.7 metros de altura y 150 kg de peso.<br>
+          – Alas pequeñas, pero patas muy fuertes.<br>
+          – Pueden correr hasta 70 km/h.<br>
+          – Tienen ojos más grandes que su cerebro.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son las aves más grandes y veloces del mundo.<br>
+          – Sus huevos son los más grandes del reino animal.<br>
+          – No entierran la cabeza, pero sí agachan el cuello para camuflarse.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
-  searchInput.addEventListener('input', filtrarAnimales);
-  categoryFilter.addEventListener('change', filtrarAnimales);
-</script>
 
-<script>
-  function limpiarFiltros() {
-    document.getElementById("searchInput").value = "";
-    document.getElementById("categoryFilter").value = "";
-    filtrarAnimales(); // función que ya deberías tener para filtrar
-  }
-</script>
+<!-- Modal Gorila -->
+<div class="modal fade" id="modalGorila" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦍 Gorila</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Gorilla gorilla</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Selvas tropicales del África central.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Come hojas, tallos, frutos y brotes.</p>
+        <p><strong>👶 Reproducción:</strong> La hembra tiene una cría cada 4 años, con gestación de 8.5 meses. El macho dominante cuida el grupo.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 1.80 m y más de 200 kg.<br>
+          – Fuerza descomunal y cuerpo musculoso.<br>
+          – Andan con los nudillos.<br>
+          – Inteligencia comparable con grandes simios.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden aprender lenguaje de señas.<br>
+          – Son pacíficos y solo atacan si se sienten amenazados.<br>
+          – Forman familias organizadas con jerarquía.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Hipopótamo -->
+<div class="modal fade" id="modalHipopotamo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦛 Hipopótamo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Hippopotamus amphibius</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Ríos, lagos y humedales de África subsahariana.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Sale por las noches a pastar hasta 40 kg de hierba.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 8 meses. La cría nace bajo el agua y es muy protegida por la madre.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 1.6 toneladas de peso.<br>
+          – Piel gruesa y húmeda que segrega un líquido rosado protector.<br>
+          – Abre la boca hasta 150°.<br>
+          – Muy territorial en el agua.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – A pesar de su peso, corre hasta 30 km/h.<br>
+          – Su mordida es una de las más potentes del reino animal.<br>
+          – Se comunica con gruñidos bajo el agua.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Jabalí -->
+<div class="modal fade" id="modalJabali" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐗 Jabalí</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Sus scrofa</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, praderas y zonas agrícolas de Europa, Asia y el norte de África.</p>
+        <p><strong>🍗 Alimentación:</strong> Omnívoro. Come raíces, frutos, insectos, pequeños animales y carroña.</p>
+        <p><strong>👶 Reproducción:</strong> La hembra puede tener camadas de hasta 12 crías tras 4 meses de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo robusto y pelaje oscuro.<br>
+          – Colmillos curvos en los machos.<br>
+          – Hocico muy desarrollado y sensible.<br>
+          – Buen nadador.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Se adapta fácilmente a diferentes hábitats.<br>
+          – Su inteligencia les permite evadir trampas.<br>
+          – Ancestros directos del cerdo doméstico.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 
 
+<!-- Modal Cocodrilo -->
+<div class="modal fade" id="modalCocodrilo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐊 Cocodrilo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Crocodylus niloticus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Ríos, lagos y pantanos de África y Asia.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Caza peces, aves, mamíferos e incluso grandes presas.</p>
+        <p><strong>👶 Reproducción:</strong> Pone entre 20 y 80 huevos. La madre protege el nido y ayuda a las crías a salir del cascarón.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 6 metros de largo.<br>
+          – Mordida de más de 1 tonelada de presión.<br>
+          – Cuerpo blindado con escamas duras.<br>
+          – Ojos y nariz en la parte superior del cráneo.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden vivir más de 70 años.<br>
+          – Usan el "rollo mortal" para desgarrar presas.<br>
+          – Sobreviven semanas sin comer.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Chita -->
+<div class="modal fade" id="modalChita" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐆 Chita (Guepardo)</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Acinonyx jubatus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabana y zonas abiertas de África y algunas partes de Irán.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Caza gacelas, impalas y pequeños mamíferos.</p>
+        <p><strong>👶 Reproducción:</strong> Tiene de 3 a 5 crías por camada. Son muy vulnerables al nacer.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Corre hasta 112 km/h.<br>
+          – Cuerpo aerodinámico, garras semi-retráctiles.<br>
+          – Cola larga para equilibrio.<br>
+          – Manchas únicas por individuo.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Acelera de 0 a 100 km/h en solo 3 segundos.<br>
+          – Tiene muy baja resistencia, corre distancias cortas.<br>
+          – No ruge como otros felinos, emite chirridos y maullidos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Hiena -->
+<div class="modal fade" id="modalHiena" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦝 Hiena</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Crocuta crocuta</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabana africana, bosques y zonas semidesérticas.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívora. Caza en grupo y también consume carroña.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 4 meses. Las crías nacen en madrigueras subterráneas.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Mandíbula extremadamente poderosa.<br>
+          – Hombros elevados y cuerpo musculoso.<br>
+          – Moteado marrón oscuro.<br>
+          – Comunicación vocal compleja.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Ríen como parte de su comunicación.<br>
+          – Las hembras son más grandes y dominantes.<br>
+          – Su sistema digestivo descompone huesos con facilidad.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Mono -->
+<div class="modal fade" id="modalMono" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐒 Mono</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Varios géneros según la especie</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Selvas, bosques tropicales y sabanas de Asia, África y América.</p>
+        <p><strong>🥗 Alimentación:</strong> Omnívoro. Frutas, hojas, insectos y pequeños vertebrados.</p>
+        <p><strong>👶 Reproducción:</strong> Una sola cría por gestación. Son cuidadas intensamente por la madre.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo ágil con manos prensiles.<br>
+          – Cola larga (en la mayoría).<br>
+          – Cara expresiva y sociabilidad marcada.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden usar herramientas.<br>
+          – Tienen jerarquías sociales.<br>
+          – Algunas especies son capaces de aprender lenguaje de señas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Búfalo -->
+<div class="modal fade" id="modalBufalo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐃 Búfalo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Syncerus caffer</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabana africana, zonas pantanosas y bosques abiertos.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívoro. Pasto, hierbas y hojas.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 11 meses. Crías fuertes desde el nacimiento.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo robusto, hasta 1 tonelada de peso.<br>
+          – Cuernos curvados característicos.<br>
+          – Excelente sentido del olfato.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden ser muy agresivos si se sienten amenazados.<br>
+          – Se agrupan en manadas compactas para defensa.<br>
+          – Tienen enemigos naturales como el león.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Buitre -->
+<div class="modal fade" id="modalBuitre" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦅 Buitre</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Vultur spp.</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Montañas, sabanas y zonas semiáridas de América, Europa y África.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro (carroñero). Se alimenta de animales muertos.</p>
+        <p><strong>👶 Reproducción:</strong> Anida en riscos o árboles altos. Pone uno o dos huevos.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Alas anchas para planear.<br>
+          – Cabeza calva para higiene al alimentarse.<br>
+          – Vista aguda, detecta comida a kilómetros.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Limpian los ecosistemas evitando enfermedades.<br>
+          – Tienen jugos gástricos muy potentes.<br>
+          – Algunas especies pueden volar a grandes alturas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Tortuga -->
+<div class="modal fade" id="modalTortuga" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐢 Tortuga</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Testudines</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Ambientes marinos, terrestres y de agua dulce en casi todo el mundo.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívora o omnívora según la especie. Se alimenta de algas, frutas, vegetales y algunos insectos.</p>
+        <p><strong>👶 Reproducción:</strong> Ponen huevos en tierra firme. Las crías emergen tras varias semanas.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Caparazón duro como defensa.<br>
+          – Extremidades adaptadas según su entorno.<br>
+          – Longevas: algunas superan los 100 años.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Las tortugas marinas pueden viajar miles de kilómetros.<br>
+          – Tienen una excelente orientación magnética.<br>
+          – Su crecimiento es lento pero constante.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ballena Azul -->
+<div class="modal fade" id="modalBallena" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐋 Ballena Azul</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Balaenoptera musculus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Océanos de todo el mundo, especialmente en aguas frías y templadas.</p>
+        <p><strong>🍤 Alimentación:</strong> Carnívora. Se alimenta principalmente de krill, consumiendo hasta 4 toneladas por día.</p>
+        <p><strong>👶 Reproducción:</strong> Una cría cada 2-3 años. Gestación de 10 a 12 meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 30 metros de longitud.<br>
+          – Más de 170 toneladas de peso.<br>
+          – Canto poderoso y comunicación a grandes distancias.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Su corazón puede pesar más de 180 kg.<br>
+          – Su lengua puede pesar tanto como un elefante.<br>
+          – Son pacíficas y viajan solas o en parejas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Oso Polar -->
+<div class="modal fade" id="modalOsoPolar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐻‍❄️ Oso Polar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Ursus maritimus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Región del Ártico: hielos marinos, tundras y costas polares.</p>
+        <p><strong>🥩 Alimentación:</strong> Carnívoro. Su dieta principal es la foca anillada y barbuda.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 8 meses. Nacen 1 a 2 crías en madrigueras de nieve.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 3 metros de largo.<br>
+          – Peso de 400 a 700 kg (machos adultos).<br>
+          – Pelaje blanco, pero piel negra para absorber calor.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Excelentes nadadores: pueden nadar más de 100 km sin parar.<br>
+          – Su olfato detecta presas a más de 1 km de distancia.<br>
+          – Están en peligro por el derretimiento del hielo marino.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Cerdo -->
+<div class="modal fade" id="modalCerdo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐖 Cerdo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Sus scrofa domesticus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Granja y ambientes rurales, aunque también salvajes en estado feral.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Come raíces, frutas, insectos, pequeños animales y alimentos procesados.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de unos 115 días. Pueden tener entre 8 y 12 lechones.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hocico fuerte para excavar.<br>
+          – Piel rosada o manchada con pelo ralo.<br>
+          – Cuerpo robusto y patas cortas.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son muy inteligentes: aprenden rutinas y resuelven problemas.<br>
+          – Tienen un olfato altamente desarrollado.<br>
+          – Se comunican mediante gruñidos con distintos significados.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Oveja -->
+<div class="modal fade" id="modalOveja" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐑 Oveja</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Ovis aries</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Praderas, montañas y terrenos rurales adaptados a pastoreo.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívora. Se alimenta principalmente de pasto, heno y hierbas.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 5 meses. Generalmente nacen una o dos crías llamadas corderos.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Lana espesa que debe esquilarse una vez al año.<br>
+          – Hocico recto y orejas caídas o erguidas.<br>
+          – Tienen buena visión periférica.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son animales sociales que reconocen hasta 50 caras.<br>
+          – Tienen una excelente memoria visual.<br>
+          – Algunas razas producen más de 4 kg de lana por año.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Cabra -->
+<div class="modal fade" id="modalCabra" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐐 Cabra</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Capra aegagrus hircus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Montañas, colinas y terrenos de pastoreo en zonas rurales.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívora. Come pasto, hojas, corteza y matorrales.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 5 meses. Pueden tener 1 a 3 crías por parto.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo ágil y patas fuertes.<br>
+          – Cuernos curvos en machos y algunas hembras.<br>
+          – Barba característica en muchas razas.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son muy curiosas y buenas trepadoras.<br>
+          – Se comunican con balidos distintos para cada situación.<br>
+          – Reconocen a sus cuidadores y pueden formar vínculos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Conejo -->
+<div class="modal fade" id="modalConejo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐇 Conejo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Oryctolagus cuniculus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Praderas, bosques y zonas rurales; también se cría como mascota.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívoro. Se alimenta de pasto, heno, vegetales y frutas.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 28-32 días. Pueden tener hasta 12 crías por camada.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Largas orejas y patas traseras fuertes.<br>
+          – Vista panorámica casi de 360°.<br>
+          – Pelo suave de diversos colores.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Tienen dientes que nunca dejan de crecer.<br>
+          – Se comunican golpeando el suelo con sus patas.<br>
+          – Son muy limpios y silenciosos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Burro -->
+<div class="modal fade" id="modalBurro" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐴 Burro</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Equus africanus asinus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Regiones secas, rurales y montañosas; domesticado en todo el mundo.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívoro. Come hierba, heno, paja y vegetales.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 11-14 meses. Suelen tener una sola cría.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Orejas largas y expresivas.<br>
+          – Cuerpo compacto y resistente.<br>
+          – Pelaje corto y fuerte.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son más inteligentes de lo que se cree y muy cautelosos.<br>
+          – Tienen una memoria excelente.<br>
+          – Pueden resistir climas muy calurosos.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Mula -->
+<div class="modal fade" id="modalMula" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐾 Mula</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Origen:</strong> Híbrido estéril resultado del cruce entre una yegua (caballo hembra) y un burro macho.</p>
+        <p><strong>🗺️ Hábitat:</strong> Zonas rurales, montañosas y agrícolas de todo el mundo.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívora. Come pasto, heno, avena y vegetales.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo similar al caballo pero con orejas largas como el burro.<br>
+          – Patas fuertes y gran resistencia física.<br>
+          – Muy longeva y robusta.
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Combinan la inteligencia del burro con la fuerza del caballo.<br>
+          – Son muy utilizadas en zonas montañosas por su equilibrio.<br>
+          – No pueden reproducirse por ser híbridas.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Gallo -->
+<div class="modal fade" id="modalGallo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐓 Gallo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Gallus gallus domesticus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Granjas, patios rurales y zonas domésticas.</p>
+        <p><strong>🥗 Alimentación:</strong> Omnívoro. Come granos, semillas, insectos y restos vegetales.</p>
+        <p><strong>👶 Reproducción:</strong> Fértil tras apareamiento. El gallo fecunda los huevos que pone la gallina.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cresta roja y pronunciada.<br>
+          – Plumaje colorido, especialmente en el cuello y cola.<br>
+          – Espolones en las patas que usa en peleas.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Su canto marca el inicio del día.<br>
+          – Son jerárquicos y defienden su territorio.<br>
+          – Reconocen hasta 100 caras de otros animales.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pollo -->
+<div class="modal fade" id="modalPollo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐥 Pollo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Gallus gallus domesticus (juvenil)</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Gallineros y corrales. Se cría por su carne y huevos.</p>
+        <p><strong>🥗 Alimentación:</strong> Omnívoro. Come maíz, semillas, insectos y restos de comida.</p>
+        <p><strong>👶 Reproducción:</strong> Nacen del huevo tras 21 días de incubación.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Plumón amarillo o marrón.<br>
+          – Pico corto y patas delgadas.<br>
+          – Crecimiento rápido en pocas semanas.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son muy activos desde que nacen.<br>
+          – Siguen a su madre en fila desde el primer día.<br>
+          – Su temperatura corporal sube rápidamente tras nacer.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Paloma -->
+<div class="modal fade" id="modalPaloma" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🕊️ Paloma</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Columba livia</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Ciudades, campos y zonas urbanas de todo el mundo.</p>
+        <p><strong>🥗 Alimentación:</strong> Granívora. Se alimenta de semillas, granos y pequeñas frutas.</p>
+        <p><strong>👶 Reproducción:</strong> Ponen 2 huevos y ambos padres los incuban. Crías llamadas "pichones".</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Plumaje gris o blanco.<br>
+          – Pico corto y patas rosadas.<br>
+          – Vuelo ágil y gran sentido de la orientación.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Fueron usadas como mensajeras en guerras.<br>
+          – Reconocen rostros humanos.<br>
+          – Representan paz en muchas culturas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Canario -->
+<div class="modal fade" id="modalCanario" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🎶 Canario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Serinus canaria</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Originario de las Islas Canarias, ahora también en casas y aviarios.</p>
+        <p><strong>🥗 Alimentación:</strong> Granívoro. Se alimenta de semillas, frutas y verduras.</p>
+        <p><strong>👶 Reproducción:</strong> Ponen de 3 a 5 huevos por nidada. La hembra incuba mientras el macho alimenta.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Pequeño, con plumaje amarillo brillante o verdoso.<br>
+          – Pico corto.<br>
+          – Canto armónico, especialmente los machos.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Fueron usados en minas para detectar gases tóxicos.<br>
+          – Existen muchas razas por selección artificial.<br>
+          – Pueden aprender melodías complejas si se entrenan.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ganso -->
+<div class="modal fade" id="modalGanso" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🪿 Ganso</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Anser anser domesticus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Zonas húmedas, riberas y granjas.</p>
+        <p><strong>🥗 Alimentación:</strong> Omnívoro. Come hierbas, granos, insectos y pequeños peces.</p>
+        <p><strong>👶 Reproducción:</strong> Ponen de 4 a 10 huevos. Son muy protectores con sus crías.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuello largo y pico ancho.<br>
+          – Plumaje blanco o grisáceo.<br>
+          – Patas anaranjadas y palmípedas.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Pueden vivir hasta 20 años.<br>
+          – Se usan como guardianes en granjas.<br>
+          – Son monógamos y migran en forma de "V".</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Pato -->
+<div class="modal fade" id="modalPato" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦆 Pato</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Anas platyrhynchos domesticus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Estanques, lagunas, ríos y granjas.</p>
+        <p><strong>🥗 Alimentación:</strong> Omnívoro. Se alimenta de plantas acuáticas, insectos, lombrices y granos.</p>
+        <p><strong>👶 Reproducción:</strong> Ponen varios huevos que la madre incuba. Crías llamadas patitos.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Pico ancho y plano.<br>
+          – Patas cortas con membranas.<br>
+          – Plumaje variado según la especie.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Tienen una glándula que impermeabiliza su plumaje.<br>
+          – Emiten sonidos llamados "cuac".<br>
+          – Los patos pueden dormir con un ojo abierto.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Chimpancé -->
+<div class="modal fade" id="modalChimpance" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐵 Chimpancé</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Pan troglodytes</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques tropicales y sabanas del África central y occidental.</p>
+        <p><strong>🍌 Alimentación:</strong> Omnívoro. Se alimenta de frutas, hojas, insectos e incluso carne.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 8 meses, nace una cría que depende de la madre por varios años.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hasta 1.7 m de altura (de pie).<br>
+          – Cara sin pelo.<br>
+          – Brazos largos y fuertes.<br>
+          – Gran capacidad de manipular herramientas.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Comparten más del 98% de ADN con los humanos.<br>
+          – Usan piedras, ramas y hojas como herramientas.<br>
+          – Tienen sociedades complejas y transmiten cultura.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Orangután -->
+<div class="modal fade" id="modalOrangutan" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦧 Orangután</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Pongo spp.</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Selvas tropicales de Borneo y Sumatra.</p>
+        <p><strong>🍃 Alimentación:</strong> Omnívoro. Come frutas, hojas, huevos y pequeños animales.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 8.5 meses, nace una sola cría cada 6-8 años.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Pelo largo rojizo.<br>
+          – Brazos muy largos.<br>
+          – Machos adultos desarrollan grandes mejillas y garganta.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Viven mayormente en los árboles.<br>
+          – Son los primates más solitarios.<br>
+          – Son capaces de construir nidos cada noche para dormir.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Antílope -->
+<div class="modal fade" id="modalAntilope" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦌 Antílope</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Antilopinae (subfamilia)</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Sabanas, bosques ligeros y regiones montañosas de África y Asia.</p>
+        <p><strong>🌾 Alimentación:</strong> Herbívoro. Pastan y ramonean hojas y hierbas.</p>
+        <p><strong>👶 Reproducción:</strong> La mayoría da a luz una cría tras una gestación de 6-8 meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo esbelto.<br>
+          – Cuernos presentes en ambos sexos o solo en machos, según la especie.<br>
+          – Extremidades largas y veloces.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Algunas especies alcanzan 90 km/h.<br>
+          – Son presa común de grandes carnívoros.<br>
+          – Se comunican con señales visuales y posturas.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Koala -->
+<div class="modal fade" id="modalKoala" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐨 Koala</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Phascolarctos cinereus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques de eucaliptos en el este de Australia.</p>
+        <p><strong>🌿 Alimentación:</strong> Herbívoro especializado en hojas de eucalipto, que son tóxicas para la mayoría de animales.</p>
+        <p><strong>👶 Reproducción:</strong> Marsupial. La cría nace sin desarrollar y se refugia en la bolsa materna por 6 meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Pelaje gris suave.<br>
+          – Manos prensiles y garras fuertes.<br>
+          – Nariz grande y negra.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Duerme hasta 20 horas al día.<br>
+          – Tiene un estómago especializado para digerir toxinas.<br>
+          – Son solitarios y territoriales.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Lobo -->
+<div class="modal fade" id="modalLobo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐺 Lobo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Canis lupus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, tundras, montañas y llanuras de América del Norte, Europa y Asia.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Caza en manada ciervos, alces, jabalíes y pequeños mamíferos.</p>
+        <p><strong>👶 Reproducción:</strong> La hembra alfa pare de 4 a 7 cachorros por camada en primavera.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Hocico largo y orejas erguidas.<br>
+          – Pelaje gris, blanco o negro.<br>
+          – Larga cola espesa.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Aúllan para comunicarse a distancia.<br>
+          – Viven en manadas jerárquicas.<br>
+          – Son clave para mantener el equilibrio ecológico.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Mapache -->
+<div class="modal fade" id="modalMapache" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦝 Mapache</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Procyon lotor</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, áreas urbanas y rurales de América del Norte.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Come frutas, insectos, ranas, huevos, basura y pequeños animales.</p>
+        <p><strong>👶 Reproducción:</strong> La gestación dura 2 meses. Nacen 2–5 crías por camada.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cola anillada y cara con “máscara” negra.<br>
+          – Patas delanteras muy hábiles.<br>
+          – Tacto extremadamente desarrollado.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Lavado de comida no es limpieza, sino exploración táctil.<br>
+          – Pueden abrir cerraduras simples.<br>
+          – Muy adaptables a ambientes urbanos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Ardilla -->
+<div class="modal fade" id="modalArdilla" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐿️ Ardilla</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Sciurus vulgaris</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, parques y jardines de climas templados.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívora. Consume frutos secos, semillas, frutas, insectos y huevos.</p>
+        <p><strong>👶 Reproducción:</strong> Pueden tener 2 camadas al año con hasta 6 crías.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cola espesa y peluda.<br>– Ágiles patas traseras.<br>– Buenas trepadoras.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Guardan comida en otoño para el invierno.<br>– Tienen excelente memoria espacial.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Armadillo -->
+<div class="modal fade" id="modalArmadillo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🛡️ Armadillo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Dasypus novemcinctus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> América Central y del Sur, zonas cálidas y secas.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Come insectos, gusanos, raíces y frutas.</p>
+        <p><strong>👶 Reproducción:</strong> Paren de 1 a 4 crías idénticas, por clonación embrionaria.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Caparazón duro segmentado.<br>– Buen cavador.<br>– Oído agudo.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Puede rodar sobre sí mismo para protegerse.<br>– Es uno de los pocos animales que puede contraer lepra.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Erizo -->
+<div class="modal fade" id="modalErizo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦔 Erizo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Erinaceus europaeus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Prados, bosques y jardines de Europa y Asia.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Come insectos, caracoles, frutas y raíces.</p>
+        <p><strong>👶 Reproducción:</strong> Nacen hasta 7 crías ciegas y sin púas visibles.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cuerpo cubierto de púas no venenosas.<br>– Hocico puntiagudo.<br>– Enrolla su cuerpo como defensa.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Su defensa es hacerse una bola punzante.<br>– Es nocturno y solitario.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Puercoespín -->
+<div class="modal fade" id="modalPuercoespin" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦔 Puercoespín</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Hystrix cristata</em></p>
+        <p><strong>🗺️ Hábitat:</strong> África, Asia y América.</p>
+        <p><strong>🍽️ Alimentación:</strong> Herbívoro. Come cortezas, frutas, raíces y hojas.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 3 meses, nacen de 1 a 3 crías.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cuerpo grande con púas largas y rígidas.<br>– Mandíbula fuerte.<br>– Patas cortas.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– No lanza las púas, pero puede desprenderlas.<br>– Tamborilea con las púas cuando se siente amenazado.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Topo -->
+<div class="modal fade" id="modalTopo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐾 Topo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Talpa europaea</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Suelos blandos de Europa y Asia.</p>
+        <p><strong>🍽️ Alimentación:</strong> Insectívoro. Se alimenta de lombrices, larvas e insectos del subsuelo.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 4 semanas. Nacen 3 a 5 crías ciegas.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Patas delanteras grandes adaptadas para excavar.<br>– Ojos diminutos casi inútiles.<br>– Excelente sentido del tacto.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Puede excavar hasta 20 metros de túneles por día.<br>– Tiene hemoglobina adaptada para ambientes con poco oxígeno.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Alce -->
+<div class="modal fade" id="modalAlce" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦌 Alce</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Alces alces</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques templados y boreales del hemisferio norte.</p>
+        <p><strong>🍽️ Alimentación:</strong> Herbívoro. Se alimenta de hojas, cortezas, plantas acuáticas y brotes.</p>
+        <p><strong>👶 Reproducción:</strong> Una cría por año, gestación de 8 meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Hasta 2.3 metros de altura.<br>– Asta palmeada que puede superar los 1.5 metros de ancho.<br>– Cuerpo robusto y cuello corto.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Excelentes nadadores.<br>– Pueden sumergirse por alimentos acuáticos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ciervo -->
+<div class="modal fade" id="modalCiervo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦌 Ciervo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Cervus elaphus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, montañas y praderas de Europa, Asia y América.</p>
+        <p><strong>🍽️ Alimentación:</strong> Herbívoro. Se alimenta de pasto, hojas, cortezas y frutas.</p>
+        <p><strong>👶 Reproducción:</strong> Una cría por año tras 8 meses de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cornamenta que se renueva cada año.<br>– Cuerpo ágil y musculoso.<br>– Muy veloces.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Los machos pelean por hembras en la época de celo.<br>– Los cuernos son símbolo de fuerza y jerarquía.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Venado -->
+<div class="modal fade" id="modalVenado" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦌 Venado</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Odocoileus virginianus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques y matorrales de América.</p>
+        <p><strong>🍽️ Alimentación:</strong> Herbívoro. Se alimenta de hojas, brotes, frutas y hierbas.</p>
+        <p><strong>👶 Reproducción:</strong> Generalmente una cría por parto. Gestación de 6 a 7 meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cornamenta en los machos.<br>– Orejas grandes y cuerpo esbelto.<br>– Extremadamente ágiles.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– El venado cola blanca agita su cola como señal de alerta.<br>– Su visión nocturna es excelente.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Pantera -->
+<div class="modal fade" id="modalPantera" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐆 Pantera</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Panthera pardus (melánico)</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Selvas tropicales y sabanas de Asia y África.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Caza mamíferos pequeños y medianos, aves y reptiles.</p>
+        <p><strong>👶 Reproducción:</strong> De 2 a 4 crías por camada, tras 3 meses de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Pelaje negro por melanismo (aunque tiene manchas visibles al sol).<br>– Extremadamente ágil y sigilosa.<br>– Excelente trepadora y nadadora.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– La pantera no es una especie distinta, sino una variante de jaguar o leopardo.<br>– Cazan muchas veces desde los árboles.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Puma -->
+<div class="modal fade" id="modalPuma" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐈 Puma</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Puma concolor</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Desde Canadá hasta el sur de Sudamérica, en bosques, montañas y desiertos.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Caza ciervos, roedores y aves.</p>
+        <p><strong>👶 Reproducción:</strong> De 1 a 6 crías tras 90-96 días de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Color uniforme marrón claro.<br>– Hasta 2.7 m de largo incluyendo la cola.<br>– Musculoso, con gran capacidad de salto.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– También conocido como león de montaña o cougar.<br>– No ruge, sino que emite chillidos agudos y silbidos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Jaguar -->
+<div class="modal fade" id="modalJaguar" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐆 Jaguar</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Panthera onca</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Selvas húmedas de América Central y del Sur.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Caza grandes presas como capibaras, tapires y caimanes.</p>
+        <p><strong>👶 Reproducción:</strong> 1 a 4 crías por camada, gestación de unos 100 días.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Pelaje dorado con manchas negras en forma de rosetas.<br>– Más robusto que el leopardo.<br>– Mordida extremadamente fuerte.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Su nombre proviene del guaraní “yaguareté”: bestia de verdad.<br>– Caza muchas veces emboscando desde el agua.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Dromedario -->
+<div class="modal fade" id="modalDromedario" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐪 Dromedario</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Camelus dromedarius</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Desiertos y zonas áridas del norte de África y Oriente Medio.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Se alimenta de hierbas, hojas y brotes.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 13 a 14 meses, usualmente una cría.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Una joroba que almacena grasa.<br>– Adaptado para sobrevivir sin agua largos períodos.<br>– Patas largas para caminar en la arena.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Puede beber hasta 40 litros de agua en 15 minutos.<br>– Su joroba no almacena agua directamente.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Ñu -->
+<div class="modal fade" id="modalNu" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐃 Ñu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Connochaetes taurinus</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Llanuras y sabanas del este y sur de África.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Pasto, hojas y brotes.</p>
+        <p><strong>👶 Reproducción:</strong> Una cría por parto, gestación de 8 meses.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cuerpo robusto y patas fuertes.<br>– Cuernos curvados hacia arriba.<br>– Manchas negras y marrones.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Realizan migraciones masivas conocidas como “La gran migración”.<br>– Son presa común de grandes felinos.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Suricata -->
+<div class="modal fade" id="modalSuricata" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐾 Suricata</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Suricata suricatta</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Desiertos y zonas semiáridas del sur de África.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Come insectos, pequeños reptiles, frutas y raíces.</p>
+        <p><strong>👶 Reproducción:</strong> De 2 a 5 crías por camada, tras 11 semanas de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Pequeño tamaño y cuerpo ágil.<br>– Cola larga y delgada.<br>– Viven en grupos sociales muy organizados.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Se mantienen vigilantes para alertar de peligros.<br>– Usan madrigueras para protección.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Zorrillo -->
+<div class="modal fade" id="modalZorrillo" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦨 Zorrillo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Mephitis mephitis</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques, praderas y áreas suburbanas de América del Norte y Central.</p>
+        <p><strong>🍽️ Alimentación:</strong> Omnívoro. Insectos, frutas, pequeños vertebrados y carroña.</p>
+        <p><strong>👶 Reproducción:</strong> 2 a 10 crías tras 2 meses de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Pelaje negro con rayas blancas distintivas.<br>– Glándulas anales que liberan olor fuerte.<br>– Cuerpo pequeño y patas cortas.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Su olor es un potente mecanismo de defensa.<br>– Puede rociar hasta a 3 metros de distancia.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Lémur -->
+<div class="modal fade" id="modalLemur" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐒 Lémur</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Lemur catta</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Bosques secos y húmedos de Madagascar.</p>
+        <p><strong>🍃 Alimentación:</strong> Herbívoro. Frutas, hojas, flores y cortezas.</p>
+        <p><strong>👶 Reproducción:</strong> Una cría por año tras 4 meses de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cola larga y anillada en blanco y negro.<br>– Ojos grandes y expresivos.<br>– Viven en grupos sociales complejos.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Son animales muy sociales y vocales.<br>– Realizan baños de sol para calentarse.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Nutria -->
+<div class="modal fade" id="modalNutria" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🦦 Nutria</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Lutrinae</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Ríos, lagos y costas en todo el mundo.</p>
+        <p><strong>🍖 Alimentación:</strong> Carnívoro. Pescados, crustáceos y pequeños animales acuáticos.</p>
+        <p><strong>👶 Reproducción:</strong> 1 a 6 crías tras 2 meses de gestación.</p>
+        <p><strong>📏 Características físicas:</strong><br>– Cuerpo alargado y flexible.<br>– Pelaje denso e impermeable.<br>– Patas con membranas para nadar.</p>
+        <p><strong>🤯 Curiosidades:</strong><br>– Usan herramientas para abrir conchas.<br>– Son muy juguetonas y sociales.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Delfín -->
+<div class="modal fade" id="modalDelfin" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐬 Delfín</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Delphinidae</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Océanos y algunas aguas costeras en todo el mundo.</p>
+        <p><strong>🍃 Alimentación:</strong> Carnívoro. Se alimenta principalmente de peces y calamares.</p>
+        <p><strong>👶 Reproducción:</strong> Gestación de 10 a 12 meses, nace una cría que es cuidada intensamente por la madre.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo hidrodinámico para nadar rápido.<br>
+          – Inteligencia avanzada y uso de ecolocación.<br>
+          – Pueden saltar fuera del agua y comunicarse mediante sonidos complejos.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son conocidos por su sociabilidad y cooperación.<br>
+          – Algunos grupos ayudan a pescadores a atrapar peces.<br>
+          – Pueden reconocerse a sí mismos en espejos, mostrando autoconciencia.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Mantarraya -->
+<div class="modal fade" id="modalMantarraya" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🌊 Mantarraya</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Manta birostris</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Océanos tropicales y subtropicales, aguas abiertas.</p>
+        <p><strong>🍃 Alimentación:</strong> Filtradora. Se alimenta de plancton y pequeños peces que filtra al nadar.</p>
+        <p><strong>👶 Reproducción:</strong> Ovovivípara, las crías nacen vivas tras desarrollarse dentro de la madre.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Envergadura de hasta 7 metros.<br>
+          – Cuerpo plano y ancho con “alas” grandes.<br>
+          – Movimientos suaves y gráciles en el agua.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Son uno de los peces más grandes del océano.<br>
+          – Pueden saltar fuera del agua para eliminar parásitos.<br>
+          – No tienen aguijón, a diferencia de otras rayas.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Salmón -->
+<div class="modal fade" id="modalSalmon" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🐟 Salmón</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Oncorhynchus spp.</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Ríos y océanos en América del Norte, Europa y Asia.</p>
+        <p><strong>🍃 Alimentación:</strong> Omnívoro. Come insectos, crustáceos y peces pequeños.</p>
+        <p><strong>👶 Reproducción:</strong> Migran río arriba para desovar en el lugar donde nacieron, mueren después de reproducirse.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo alargado y fuerte.<br>
+          – Color plateado con tonos rosados.<br>
+          – Fuerza y resistencia para nadar en corrientes fuertes.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Usan su sentido magnético para orientarse en migraciones.<br>
+          – Son un símbolo cultural y alimenticio en muchas regiones.<br>
+          – Su viaje puede superar cientos de kilómetros.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal Medusa -->
+<div class="modal fade" id="modalMedusa" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">🌐 Medusa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>Nombre científico:</strong> <em>Scyphozoa</em></p>
+        <p><strong>🗺️ Hábitat:</strong> Océanos y mares de todo el mundo, sobre todo aguas cálidas y templadas.</p>
+        <p><strong>🍃 Alimentación:</strong> Carnívoro. Se alimenta de plancton, peces pequeños y larvas que atrapa con sus tentáculos.</p>
+        <p><strong>👶 Reproducción:</strong> Complejo ciclo de vida con fases de pólipo y medusa.</p>
+        <p><strong>📏 Características físicas:</strong><br>
+          – Cuerpo gelatinoso en forma de campana.<br>
+          – Tentáculos con células urticantes para defensa y captura.<br>
+          – Pueden variar en tamaño desde pocos milímetros hasta varios metros.<br>
+        </p>
+        <p><strong>🤯 Curiosidades:</strong><br>
+          – Algunas especies son bioluminiscentes.<br>
+          – No tienen cerebro ni sistema nervioso central.<br>
+          – Algunas medusas pueden reproducirse asexualmente.<br>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+  <!-- Bootstrap -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <!-- Filtro -->
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const cards = document.querySelectorAll('.animal-card');
+
+    function filtrarAnimales() {
+      const search = searchInput.value.toLowerCase();
+      const category = categoryFilter.value;
+
+      cards.forEach(card => {
+        const name = card.getAttribute('data-name');
+        const cat = card.getAttribute('data-category');
+
+        const matchName = name.includes(search);
+        const matchCategory = !category || cat === category;
+
+        card.style.display = matchName && matchCategory ? 'block' : 'none';
+      });
+    }
+
+    searchInput.addEventListener('input', filtrarAnimales);
+    categoryFilter.addEventListener('change', filtrarAnimales);
+
+    function limpiarFiltros() {
+      document.getElementById("searchInput").value = "";
+      document.getElementById("categoryFilter").value = "";
+      filtrarAnimales();
+    }
+  </script>
 </body>
 </html>
