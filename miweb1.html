@@ -10,7 +10,8 @@
     body {
   background-color: #fdfaf5;
   color: #333;
-}
+  margin-left: 50px;
+    }
 
 .hero {
       padding: 4rem;
@@ -97,10 +98,7 @@ i.bi {
 }
 
 .btn-close {
-  filter: invert(1);
-}
-
-
+  filter: invert(1);}
 
 </style>
 </head>
@@ -108,20 +106,23 @@ i.bi {
 <body>
 
   <!-- Hero -->
-  <section class="hero text-center m-5">
-    <h1>🌍 Bienvenido al Mundo Animal</h1>
-    <p>Gracias por registrarte. Aquí descubrirás datos, curiosidades y maravillas de cada especie animal.</p>
-  </section>
+   <div class="col-12 md-6 text-center m-5">
 
-  <div class="text-center m-5">
-    <h1>Exploremos el mundo animal</h1>
+     <section class="hero">
+       <h1>🌍 Bienvenido al Mundo Animal</h1>
+       <p>Gracias por registrarte. Aquí descubrirás datos, curiosidades y maravillas de cada especie animal.</p>
+     </section>
+   </div>
+
+<div class="text-center m-5">
+   <h1>Exploremos el mundo animal</h1>
   </div>
 
   <!-- Contenido principal -->
-  <div class="container text-center m-5">
+  <div class="container  text-center ps-5 m-5">
 
     <!-- Filtros -->
-    <div class="mb-4">
+    <div class="mb-5">
       <div class="p-4 rounded shadow-sm filter-box bg-white">
         <h5 class="mb-3 text-success">🔎 Buscar animales</h5>
         <div class="row g-3 align-items-center">
@@ -159,7 +160,7 @@ i.bi {
     </div>
 
     <!-- Cards de animales -->
-    <div class="row row-cols-1 row-cols-md-3 g-4" id="animalGrid">
+    <div class="row row-cols-1 row-cols-md-3 g-5" id="animalGrid">
 
       <!-- Ejemplo: Elefante -->
       <div class="col animal-card" data-name="elefante africano" data-category="herbivoro">
