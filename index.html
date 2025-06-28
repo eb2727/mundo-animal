@@ -49,30 +49,28 @@
 <body>
 
   <form action="https://formsubmit.co/el/hopopa"
-  method="post" class="needs-validation" novalidate
->
-  <div class="mb-3">
-    <label class="fs-label" for="name">Name</label>
-    <input class="fs-input" id="name" name="name" required />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email Address</label>
-    <input class="fs-input" id="email" name="email" required />
-  </div>
-  
-  <div class="mb-3">
-    <label class="fs-label" for="message">Inquiry Message</label>
-    <textarea
-      class="fs-textarea"
-      id="message"
-      name="message"
-      required
-    ></textarea>
-  </div>
-  <div class="text-center">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
-</form>
+  method="POST"class="needs-validation" novalidate>
+    <div class="text-center">
+      <h2 class="header">Bienvenidos al mundo de los animales</h2>
+    </div>
+
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input type="text" class="form-control" id="nombre" name="nombre" required>
+      <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input type="email" class="form-control" id="email" name="email" required>
+      <div class="invalid-feedback">Introduce un correo válido.</div>
+    </div>
+
+    <div class="text-center">
+      <button class="btn btn-primary mt-3" type="submit" name="submit">Ingresar</button>
+    </div>
+  </form>
+
 
   <!-- Modal de confirmación -->
   <!--<div class="modal fade" id="modalConfirmacion" tabindex="-1" aria-hidden="true">
