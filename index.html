@@ -48,25 +48,26 @@
 </head>
 <body>
 
-  <form class="needs-validation" novalidate>
+  <form action="https://formspree.io/f/xqabdewg"
+  method="POST"class="needs-validation" novalidate>
     <div class="text-center">
       <h2 class="header">Bienvenidos al mundo de los animales</h2>
     </div>
 
     <div class="mb-3">
       <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="nombre" required>
+      <input type="text" class="form-control" id="nombre" name="nombre" required>
       <div class="invalid-feedback">Por favor, escribe tu nombre.</div>
     </div>
 
     <div class="mb-3">
       <label for="email" class="form-label">Correo electrónico</label>
-      <input type="email" class="form-control" id="email" required>
+      <input type="email" class="form-control" id="email" name="email" required>
       <div class="invalid-feedback">Introduce un correo válido.</div>
     </div>
 
     <div class="text-center">
-      <button class="btn btn-primary mt-3" type="submit">Ingresar</button>
+      <button class="btn btn-primary mt-3" type="submit" name="submit">Ingresar</button>
     </div>
   </form>
 
